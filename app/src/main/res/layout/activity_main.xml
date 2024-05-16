@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/idRLContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!--on below line we are creating
+        a text for our app-->
+
+    <!--on below line we are creating a text view-->
+
+    <TextView
+        android:id="@+id/idTVHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="165dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Profile Update"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/editTextFullName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Full Name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_below="@id/idTVHeading"/>
+
+    <EditText
+        android:id="@+id/idTVSelectedDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextFullName"
+        android:padding="10dp"
+        android:hint="Date of birth"
+        android:textColor="@color/black" />
+    <Button
+        android:id="@+id/idBtnPickDate"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignBaseline="@id/idTVSelectedDate"
+        android:layout_alignEnd="@id/idTVSelectedDate"
+        android:background="@drawable/ic_calendar"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/textViewGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select your gender: "
+        android:layout_below="@id/idTVSelectedDate"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroupGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_below="@id/textViewGender"
+        >
+
+        <RadioButton
+            android:id="@+id/radioButtonMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male" />
+
+        <RadioButton
+            android:id="@+id/radioButtonFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female" />
+
+        <!--            <RadioButton-->
+        <!--                android:id="@+id/radioButtonOther"-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:text="Other" />-->
+    </RadioGroup>
+
+    <AutoCompleteTextView
+        android:id="@+id/editTextNationality"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nation"
+        android:completionThreshold="0"
+        android:layout_below="@id/radioGroupGender" />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:hint="Email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_below="@id/editTextNationality" />
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:hint="Phone Number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_below="@id/editTextEmail" />
+
+    <Button
+        android:id="@+id/buttonRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirm"
+        android:layout_below="@id/editTextPhone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+    <!--on below line we are creating
+        a button for date picker-->
+
+
+</RelativeLayout>
